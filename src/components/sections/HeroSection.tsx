@@ -1,5 +1,8 @@
 import { Section } from "../blocks/Section"
+import { Typography } from "@mui/material"
 
 export const HeroSection = () => (
-    <Section>Test</Section>
+    <Section>
+        <Typography variant="h4"><Typography display="inline" variant="inherit" fontWeight="bold">Hello!</Typography> I'm Joshua. I'm a...</Typography>
+    </Section>
 )
