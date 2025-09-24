@@ -19,18 +19,9 @@ export const HeroSection = () => {
                 <Box color={'white'} sx={{ order: 3 }}>[desktop]Developer</Box>
             </Stack>
             <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <TabContext value={value}>
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                        <TabList onChange={handleChange} aria-label="lab API tabs example">
-                            <Tab label="Item One" value="1" />
-                            <Tab label="Item Two" value="2" />
-                            <Tab label="Item Three" value="3" />
-                        </TabList>
-                    </Box>
-                    <TabPanel value="1">Item One</TabPanel>
-                    <TabPanel value="2">Item Two</TabPanel>
-                    <TabPanel value="3">Item Three</TabPanel>
-                </TabContext>
+                <Box color={'white'} sx={{ order: 1 }}>[mobile]Designer</Box>
+                <Box color={'white'} sx={{ order: 2 }}>[mobile]Head</Box>
+                <Box color={'white'} sx={{ order: 3 }}>[mobile]Developer</Box>
             </Stack>
         </Section >
     )
