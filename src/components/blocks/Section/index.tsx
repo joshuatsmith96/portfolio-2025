@@ -1,16 +1,17 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, type SxProps } from "@mui/material";
 import { SectionStyles } from "./styles/SectionStyles";
 import { Image } from "../Image";
-import Grid from '../../../assets/Grid.png';
 
-export const Section = ({ children }: { children: React.ReactNode }) => {
+export const Section = ({ children, bgImgSrc, bgImgAlt, sx }: { children: React.ReactNode, bgImgSrc?: string, bgImgAlt?: string, sx?: SxProps }) => {
+    console.log("HELLO FROM SECTION")
     return (
         <Stack
             width="100%"
             alignItems="center"
             py={4}
+            sx={sx}
         >
-            <Image src={Grid} alt="Test" sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }} />
+            <Image src={bgImgSrc ? bgImgSrc : ''} alt={bgImgAlt ? bgImgAlt : ''} sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }} />
             <Box sx={SectionStyles}>
                 {children}
             </Box>
