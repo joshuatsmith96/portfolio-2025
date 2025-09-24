@@ -1,7 +1,8 @@
 import { Section } from "../../blocks/Section"
-import { Box, Stack, Typography } from "@mui/material"
+import { Typography } from "@mui/material"
 import { HeroTypographyStyles } from "./HeroSectionStyles"
 import Grid from '../../../assets/Grid.png';
+import { HeroImageCustomizer } from "../../blocks/HeroImageCustomizer";
 
 
 export const HeroSection = () => {
@@ -13,16 +14,7 @@ export const HeroSection = () => {
                     Hello!
                 </Typography> I'm Joshua. I'm a...
             </Typography>
-            <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <Box color={'white'} sx={{ order: 1 }}>[desktop]Designer</Box>
-                <Box color={'white'} sx={{ order: 2 }}>[desktop]Head</Box>
-                <Box color={'white'} sx={{ order: 3 }}>[desktop]Developer</Box>
-            </Stack>
-            <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'flex', md: 'none' } }}>
-                <Box color={'white'} sx={{ order: 1 }}>[mobile]Designer</Box>
-                <Box color={'white'} sx={{ order: 2 }}>[mobile]Head</Box>
-                <Box color={'white'} sx={{ order: 3 }}>[mobile]Developer</Box>
-            </Stack>
+            <HeroImageCustomizer />
         </Section >
     )
 }
