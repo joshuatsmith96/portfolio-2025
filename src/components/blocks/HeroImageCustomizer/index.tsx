@@ -14,7 +14,7 @@ export const HeroImageCustomizer = () => {
 
     return (
         <>
-            <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'none', md: 'flex' }, mt: 10 }}>
                 <DesignerInterface />
                 <HeadComponent />
                 <DeveloperInterface />
