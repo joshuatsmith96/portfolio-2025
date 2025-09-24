@@ -7,7 +7,6 @@ export const Section = ({ children }: { children: React.ReactNode }) => {
             width="100%"
             alignItems="center"
             py={4}
-            border="solid red"
         >
             <Box sx={SectionStyles}>
                 {children}

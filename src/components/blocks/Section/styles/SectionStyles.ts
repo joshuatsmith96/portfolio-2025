@@ -1,5 +1,7 @@
 export const SectionStyles = {
-    border: 'solid',
-    width: '95%',
-    maxWidth: '1000px',
+    width: '90%',
+    maxWidth: {
+        xl: '1400px',
+        md: '1000px'
+    },
 };
