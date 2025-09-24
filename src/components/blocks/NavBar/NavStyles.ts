@@ -3,7 +3,7 @@ export const NavContainerStyles = {
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    top: 30,
+    top: 15,
     zIndex: 10,
 }
 
