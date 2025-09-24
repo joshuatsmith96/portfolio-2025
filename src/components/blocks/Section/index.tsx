@@ -8,7 +8,7 @@ export const Section = ({ children, bgImgSrc, bgImgAlt, sx }: { children: React.
         <Stack
             width="100%"
             alignItems="center"
-            py={4}
+            pt={4}
             sx={sx}
             position={'relative'}
         >
