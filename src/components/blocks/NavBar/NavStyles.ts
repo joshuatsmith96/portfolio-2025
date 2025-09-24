@@ -4,6 +4,7 @@ export const NavContainerStyles = {
     justifyContent: 'center',
     width: '100%',
     top: 30,
+    zIndex: 10,
 }
 
 export const NavBarStyles = {
