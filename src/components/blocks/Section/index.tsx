@@ -10,8 +10,9 @@ export const Section = ({ children, bgImgSrc, bgImgAlt, sx }: { children: React.
             alignItems="center"
             py={4}
             sx={sx}
+            position={'relative'}
         >
-            <Image src={bgImgSrc ? bgImgSrc : ''} alt={bgImgAlt ? bgImgAlt : ''} sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }} />
+            <Image src={bgImgSrc ? bgImgSrc : ''} alt={bgImgAlt ? bgImgAlt : ''} sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0, height: '100%', objectFit: 'cover' }} />
             <Box sx={SectionStyles}>
                 {children}
             </Box>
