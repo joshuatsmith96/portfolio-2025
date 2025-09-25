@@ -7,9 +7,9 @@ import { useState } from "react"
 import { FilterContext } from "../../../contexts/FilterContext"
 
 export const HeroImageCustomizer = () => {
-    const [contrast, setContrast] = useState(100)
+    const [contrast, setContrast] = useState(50)
     const [saturation, setSaturation] = useState(20)
-    const [brightness, setBrightness] = useState(100)
+    const [brightness, setBrightness] = useState(50)
 
     const noFilters: boolean = contrast === 0 && saturation === 0 && brightness === 0;
 

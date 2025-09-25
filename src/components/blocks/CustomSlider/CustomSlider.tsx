@@ -16,7 +16,7 @@ export const CustomSlider = ({
 
     return (
         <Box>
-            <Typography>{label}</Typography>
+            <Typography>{label} - {value}%</Typography>
             <Slider
                 value={value}
                 aria-label="Small"
