@@ -2,8 +2,9 @@ import { Box, Button, Typography } from "@mui/material"
 import { useContext } from "react"
 import { FilterContext } from "../../../../contexts/FilterContext"
 import { CustomSlider } from "../../CustomSlider/CustomSlider"
+import { containerStyles } from "../HeroImageStyles"
 
-export const DeveloperInterface = () => {
+export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
 
     const useFilterContext = useContext(FilterContext);
 
@@ -21,9 +22,14 @@ export const DeveloperInterface = () => {
         setBrightness(50);
     }
 
+    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', right: '2%' } : {}
+
+
+
     return (
-        <Box color={'white'} sx={{ order: 1, backgroundColor: 'rgba(0, 0, 0, 0.41)', border: 'solid #3c3c3cff thin', padding: 2, width: '300px', height: "300px", borderRadius: 1 }}>
-            <Typography textAlign={'center'} variant="h5">&#60;&#62; Developer &#60;/&#62;</Typography>
+        <Box color={'white'} sx={[containerStyles, position]}>
+            <Typography textAlign={'center'} variant="h5">Developer</Typography>
+            <Typography textAlign={'center'}>Try adjusting the filters!</Typography>
             <Box sx={{ width: '100%' }}>
                 {noFilters ? '' : <Button onClick={resetFilters}>Reset</Button>}
                 <CustomSlider label="Contrast" value={contrast} color="primary" onChange={(_, newValue) => setContrast(newValue as number)} />

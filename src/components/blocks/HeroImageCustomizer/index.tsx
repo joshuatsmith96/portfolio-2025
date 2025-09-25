@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material"
+import { Box, Stack } from "@mui/material"
 import { CustomTab } from "../Tabs"
 import { DesignerInterface } from "./parts/DesignerInterface"
 import { DeveloperInterface } from "./parts/DeveloperInterface"
@@ -21,8 +21,8 @@ export const HeroImageCustomizer = () => {
     }
 
     const tabs = [
-        { label: "Designer", content: <DesignerInterface /> },
         { label: "Developer", content: <DeveloperInterface /> },
+        { label: "Designer", content: <DesignerInterface /> },
     ];
 
 
@@ -30,9 +30,11 @@ export const HeroImageCustomizer = () => {
         <>
             <Stack direction="row" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'none', md: 'flex' }, mt: 10 }}>
                 <FilterContext.Provider value={providerValues}>
-                    <DesignerInterface />
-                    <HeadComponent />
-                    <DeveloperInterface />
+                    <Box sx={{ width: '100%', position: 'relative' }}>
+                        <DesignerInterface screen="desktop" />
+                        <HeadComponent />
+                        <DeveloperInterface screen="desktop" />
+                    </Box>
                 </FilterContext.Provider>
             </Stack>
             <Stack direction="column" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -40,7 +42,7 @@ export const HeroImageCustomizer = () => {
                     <CustomTab tabs={tabs} orientation="horizontal" />
                     <HeadComponent />
                 </FilterContext.Provider>
-            </Stack>
+            </Stack >
         </>
     )
 }

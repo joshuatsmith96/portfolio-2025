@@ -59,7 +59,7 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
                 </Tabs>
             </Stack>
 
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
                 {tabs.map((tab, index) => (
                     <div
                         key={index}
