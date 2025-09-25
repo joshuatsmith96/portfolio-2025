@@ -1,0 +1,1 @@
+export type SliderColorTypes = 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
