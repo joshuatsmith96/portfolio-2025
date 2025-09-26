@@ -1,6 +1,15 @@
 import { useContext } from "react"
 import { FilterContext } from "../../../../contexts/FilterContext"
 
+import Pattern1 from '../../../../assets/pattern1.png'
+import Pattern2 from '../../../../assets/pattern2.webp'
+import Pattern3 from '../../../../assets/pattern3.png'
+import Gif1 from '../../../../assets/water.gif'
+import Gif2 from '../../../../assets/warp.gif'
+import Gif3 from '../../../../assets/Fire.gif'
+import Surprise from '../../../../assets/rick-rolled.gif'
+import Default from '../../../../assets/me-left.png'
+
 export const useTerminalCommand = () => {
     const filterContext = useContext(FilterContext);
     const commandList = {
@@ -12,6 +21,7 @@ export const useTerminalCommand = () => {
             "/clear - clear the command screen"
         ],
         fillCommands: [
+            "/fill-default",
             "/fill-color-[hex-or-RBG-color-here]",
             "/fill-pattern-1",
             "/fill-pattern-2",
@@ -19,6 +29,7 @@ export const useTerminalCommand = () => {
             "/fill-gif-1",
             "/fill-gif-2",
             "/fill-gif-3",
+            "/fill-surprise"
         ]
     }
 
@@ -47,9 +58,56 @@ Next.js           |-----|
         throw new Error("useTerminalCommand must be used within a FilterContext.Provider");
     }
 
-    const { terminalText, setTerminalText } = filterContext;
+    const fill = (command: string) => {
+        if (command.includes("/fill-color-")) {
+            const color = command.replace("/fill-color-", "")
+            setFill(color)
+        } else if (command.includes("/fill-pattern-")) {
+            const patternNumber = Number(command.replace("/fill-pattern-", ""));
+            switch (patternNumber) {
+                case 1:
+                    setFill(Pattern1);
+                    break;
+                case 2:
+                    setFill(Pattern2);
+                    break;
+                case 3:
+                    setFill(Pattern3);
+                    break;
+                default:
+                    setTerminalText(terminalText + "\n# Invalid fill pattern");
+                    break;
+            }
+        } else if (command.includes("/fill-gif-")) {
+            const patternNumber = Number(command.replace("/fill-gif-", ""));
+            switch (patternNumber) {
+                case 1:
+                    setFill(Gif1);
+                    break;
+                case 2:
+                    setFill(Gif2);
+                    break;
+                case 3:
+                    setFill(Gif3);
+                    break;
+                default:
+                    setTerminalText(terminalText + "\n# Invalid fill gif");
+                    break;
+            }
+        } else if (command.includes("/fill-surprise")) {
+            setFill(Surprise)
+        } else if (command.includes("/fill-default")) {
+            setFill(Default)
+        }
+    }
+
+    const { terminalText, setTerminalText, setFill } = filterContext;
 
     const handleCommand = (command?: string) => {
+        if (command?.startsWith("/fill-")) {
+            fill(command);
+            return;
+        }
         switch (command) {
             case "/help":
                 setTerminalText(terminalText + `\n\n# List of available commands:\n${commandList.baseCommands.map((cmd) => `\n${cmd}`)}`);
@@ -61,7 +119,8 @@ Next.js           |-----|
                 setTerminalText(terminalText + commandResponses.skills);
                 break;
             case "/fill":
-                return "Fill command. More to come.";
+                setTerminalText(terminalText + `\n\n# List of available fills:\n${commandList.fillCommands.map((cmd) => `\n${cmd}`)}`)
+                break;
             case "/clear":
                 setTerminalText('')
                 break;

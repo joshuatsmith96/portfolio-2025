@@ -5,14 +5,6 @@ import { FilterContext } from "../../../../contexts/FilterContext"
 import { Input } from "@mui/material"
 import { useRef } from "react"
 import { useTerminalCommand } from "./terminalCommands"
-// import Pattern1 from '../../../../assets/pattern1.png'
-// import Pattern2 from '../../../../assets/pattern2.webp'
-// import Pattern3 from '../../../../assets/pattern3.png'
-// import Pattern4 from '../../../../assets/pattern4.png'
-// import Water from '../../../../assets/water.gif'
-// import Warp from '../../../../assets/warp.gif'
-// import Fire from '../../../../assets/Fire.gif'
-// import Default from '../../../../assets/me-left.png'
 
 export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
     const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {}
@@ -32,8 +24,7 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
         //Add command into the enteredText with a '/>' before it.
         setTerminalText(terminalText + `\nJ:/> ${value}`)
 
-        const response = terminalCommand(value);
-        console.log(response);
+        terminalCommand(value);
 
         if (inputRef.current) inputRef.current.value = '';
 
