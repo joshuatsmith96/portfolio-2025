@@ -21,6 +21,27 @@ export const useTerminalCommand = () => {
         ]
     }
 
+    const skillsTable = `My skills include (but are not limited to):\n
+________________________________
+Skills         |  Beginner Expert
+--------------------------------
+React             |-----------|
+Node.js           |----------|
+JavaScript        |-----------|
+TypeScript        |----------|
+SQL               |-------|
+HTML/CSS          |-----------|
+REST APIs         |--------|
+Git               |-----------|
+Testing (Jest)    |---|
+Next.js           |-----|
+`
+
+    const commandResponses = {
+        about: "\n\n# I'm Joshua, and I'm a developer who thrives on letting creativity run rampant! My passion is building unique projects and finding unconventional ways to stretch the limits of the technology I work with.",
+        skills: skillsTable,
+    }
+
     if (!filterContext) {
         throw new Error("useTerminalCommand must be used within a FilterContext.Provider");
     }
@@ -33,13 +54,15 @@ export const useTerminalCommand = () => {
                 setTerminalText(terminalText + `\n\n# List of available commands:\n${commandList.baseCommands.map((cmd) => `\n${cmd}`)}`);
                 break;
             case "/about":
-                return "# About command. More to come.";
+                setTerminalText(terminalText + commandResponses.about);
+                break;
             case "/skills":
-                return "Skills command. More to come.";
+                setTerminalText(terminalText + commandResponses.skills);
+                break;
             case "/fill":
                 return "Fill command. More to come.";
             default:
-                setTerminalText(terminalText + `\nUnkown command: ${command != "" ? command : '[no command entered]'}`)
+                setTerminalText(terminalText + `\n\nUnkown command: ${command != "" ? command : '[no command entered]'}`)
                 break;
         }
     };
