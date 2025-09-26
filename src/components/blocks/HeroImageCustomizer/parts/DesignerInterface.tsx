@@ -14,8 +14,6 @@ export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' })
         noFilters
     } = useFilterContext!;
 
-    console.log(contrast)
-
     const resetFilters = () => {
         setContrast(50);
         setSaturation(20);

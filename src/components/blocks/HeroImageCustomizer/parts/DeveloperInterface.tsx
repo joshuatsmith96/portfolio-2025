@@ -15,13 +15,9 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
     const { terminalText, setTerminalText } = useFilterContext!;
     const terminalCommand = useTerminalCommand();
 
-
-
-
     const onEnter = () => {
         const value = inputRef.current?.value;
 
-        //Add command into the enteredText with a '/>' before it.
         setTerminalText(terminalText + `\nJ:/> ${value}`)
 
         terminalCommand(value);
@@ -33,6 +29,7 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
                 textRef.current.scrollTop = textRef.current.scrollHeight
             }
         }, 0)
+
     };
 
 

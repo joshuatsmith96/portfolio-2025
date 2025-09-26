@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { FilterContext } from "../../../../contexts/FilterContext"
 
+
 import Pattern1 from '../../../../assets/pattern1.png'
 import Pattern2 from '../../../../assets/pattern2.webp'
 import Pattern3 from '../../../../assets/pattern3.png'
@@ -29,7 +30,7 @@ export const useTerminalCommand = () => {
             "/fill-gif-1",
             "/fill-gif-2",
             "/fill-gif-3",
-            "/fill-surprise"
+            "/fill-surprise",
         ]
     }
 
@@ -98,6 +99,8 @@ Next.js           |-----|
             setFill(Surprise)
         } else if (command.includes("/fill-default")) {
             setFill(Default)
+        } else {
+            setTerminalText(terminalText + "\n# Invalid fill type");
         }
     }
 
