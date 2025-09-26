@@ -3,7 +3,9 @@ export const containerStyles = {
     backgroundColor: 'rgba(0, 0, 0, 0.41)',
     border: 'solid #3c3c3cff thin',
     padding: 2,
-    width: '300px',
+    width: '100%',
+    maxWidth: '350px',
     height: "300px",
-    borderRadius: 1
+    borderRadius: 1,
+    zIndex: 1
 };

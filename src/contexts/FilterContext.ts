@@ -9,6 +9,8 @@ type FilterContextType = {
     setBrightness: (value: number) => void;
     fill: string;
     setFill: (value: string) => void;
+    terminalText: string;
+    setTerminalText: (value: string) => void;
     noFilters: boolean;
 }
 

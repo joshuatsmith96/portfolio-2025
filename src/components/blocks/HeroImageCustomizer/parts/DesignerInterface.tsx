@@ -1,44 +1,40 @@
-import { Box, FormControl, MenuItem, Select, Typography } from "@mui/material"
-import { containerStyles } from '../HeroImageStyles'
+import { Box, Button, Typography } from "@mui/material"
 import { useContext } from "react"
 import { FilterContext } from "../../../../contexts/FilterContext"
-import Pattern1 from '../../../../assets/pattern1.png'
-import Pattern2 from '../../../../assets/pattern2.webp'
-import Pattern3 from '../../../../assets/pattern3.png'
-import Pattern4 from '../../../../assets/pattern4.png'
-import Water from '../../../../assets/water.gif'
-import Warp from '../../../../assets/warp.gif'
-import Fire from '../../../../assets/Fire.gif'
-import Default from '../../../../assets/me-left.png'
+import { CustomSlider } from "../../CustomSlider/CustomSlider"
+import { containerStyles } from "../HeroImageStyles"
 
 export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
-    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {}
 
     const useFilterContext = useContext(FilterContext);
-    const { fill, setFill } = useFilterContext!;
+
+    const { contrast, setContrast,
+        saturation, setSaturation,
+        brightness, setBrightness,
+        noFilters
+    } = useFilterContext!;
+
+    console.log(contrast)
+
+    const resetFilters = () => {
+        setContrast(50);
+        setSaturation(20);
+        setBrightness(50);
+    }
+
+    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', right: '2%' } : {}
+
+
 
     return (
-        <Box color={'white'} sx={[containerStyles, position]} zIndex={1}>
+        <Box color={'white'} sx={[containerStyles, position]}>
             <Typography textAlign={'center'} variant="h5">Designer</Typography>
-            <Typography textAlign={'center'}>Select a design fill</Typography>
-            <Box width={'100%'}>
-                <FormControl sx={{ m: 1, width: 300 }}>
-                    <Select
-                        labelId="demo-multiple-name-label"
-                        id="demo-multiple-name"
-                        value={fill}
-                        onChange={(e) => setFill(e.target.value)}
-                        sx={{ backgroundColor: '#e5e5e5ff' }} >
-                        <MenuItem value={Default}>Default</MenuItem>
-                        <MenuItem value={Water}>Water</MenuItem>
-                        <MenuItem value={Fire}>Fire</MenuItem>
-                        <MenuItem value={Warp}>Warp</MenuItem>
-                        <MenuItem value={Pattern1}>Pattern 1</MenuItem>
-                        <MenuItem value={Pattern2}>Pattern 2</MenuItem>
-                        <MenuItem value={Pattern3}>Pattern 3</MenuItem>
-                        <MenuItem value={Pattern4}>Pattern 4</MenuItem>
-                    </Select>
-                </FormControl>
+            <Typography textAlign={'center'}>Try adjusting the filters!</Typography>
+            <Box sx={{ width: '100%' }}>
+                {noFilters ? '' : <Button onClick={resetFilters}>Reset</Button>}
+                <CustomSlider label="Contrast" value={contrast} color="primary" onChange={(_, newValue) => setContrast(newValue as number)} />
+                <CustomSlider label="Saturation" value={saturation} color="secondary" onChange={(_, newValue) => setSaturation(newValue as number)} />
+                <CustomSlider label="Brightness" value={brightness} color="success" onChange={(_, newValue) => setBrightness(newValue as number)} />
             </Box>
         </Box>
     )
