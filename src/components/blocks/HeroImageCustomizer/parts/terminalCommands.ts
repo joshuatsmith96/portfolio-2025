@@ -8,7 +8,8 @@ export const useTerminalCommand = () => {
             "/help - command information",
             "/about - learn more about me",
             "/skills - learn about my skills",
-            "/fill - info about the 'fill' command"
+            "/fill - info about the 'fill' command",
+            "/clear - clear the command screen"
         ],
         fillCommands: [
             "/fill-color-[hex-or-RBG-color-here]",
@@ -61,6 +62,9 @@ Next.js           |-----|
                 break;
             case "/fill":
                 return "Fill command. More to come.";
+            case "/clear":
+                setTerminalText('')
+                break;
             default:
                 setTerminalText(terminalText + `\n\nUnkown command: ${command != "" ? command : '[no command entered]'}`)
                 break;
