@@ -59,14 +59,14 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
                 </Tabs>
             </Stack>
 
-            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+            <Box>
                 {tabs.map((tab, index) => (
                     <div
                         key={index}
                         role="tabpanel"
                         hidden={currentTab !== index}
                     >
-                        {currentTab === index && <Box sx={{ color: "white" }}>{tab.content}</Box>}
+                        {currentTab === index && <Box sx={{ color: "white", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{tab.content}</Box>}
                     </div>
                 ))}
             </Box>

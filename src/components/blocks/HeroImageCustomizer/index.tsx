@@ -43,7 +43,7 @@ export const HeroImageCustomizer = () => {
                     </Box>
                 </FilterContext.Provider>
             </Stack>
-            <Stack direction="column" spacing={2} justifyContent="space-between" mt={2} sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <Stack direction="column" spacing={2} justifyContent={'center'} alignItems={'center'} mt={2} sx={{ display: { xs: 'flex', md: 'none' } }}>
                 <FilterContext.Provider value={providerValues}>
                     <CustomTab tabs={tabs} orientation="horizontal" />
                     <HeadComponent />

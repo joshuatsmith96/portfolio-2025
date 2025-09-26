@@ -37,7 +37,7 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
     return (
         <Box color={'white'} sx={[containerStyles, position]} zIndex={1}>
             <Typography textAlign={'center'} variant="h5">Developer</Typography>
-            <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
+            <Stack>
                 <TextField
                     multiline
                     ref={textRef}

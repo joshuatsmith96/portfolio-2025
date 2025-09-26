@@ -7,5 +7,9 @@ export const containerStyles = {
     maxWidth: '350px',
     height: "300px",
     borderRadius: 1,
-    zIndex: 1
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
 };
