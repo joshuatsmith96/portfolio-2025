@@ -7,6 +7,8 @@ type FilterContextType = {
     setSaturation: (value: number) => void;
     brightness: number;
     setBrightness: (value: number) => void;
+    fill: string;
+    setFill: (value: string) => void;
     noFilters: boolean;
 }
 

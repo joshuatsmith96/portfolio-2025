@@ -3,6 +3,7 @@ import { CustomTab } from "../Tabs"
 import { DesignerInterface } from "./parts/DesignerInterface"
 import { DeveloperInterface } from "./parts/DeveloperInterface"
 import { HeadComponent } from "./parts/HeadComponent"
+import testimage from '../../../assets/me-left.png'
 import { useState } from "react"
 import { FilterContext } from "../../../contexts/FilterContext"
 
@@ -11,13 +12,16 @@ export const HeroImageCustomizer = () => {
     const [saturation, setSaturation] = useState(20)
     const [brightness, setBrightness] = useState(50)
 
+    const [fill, setFill] = useState(testimage);
+
     const noFilters: boolean = contrast === 0 && saturation === 0 && brightness === 0;
 
     const providerValues = {
         contrast, setContrast,
         saturation, setSaturation,
         brightness, setBrightness,
-        noFilters
+        fill, setFill,
+        noFilters,
     }
 
     const tabs = [
