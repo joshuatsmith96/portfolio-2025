@@ -2,7 +2,6 @@ export const containerStyles = {
     order: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.41)',
     border: 'solid #3c3c3cff thin',
-    padding: 2,
     width: '100%',
     maxWidth: '350px',
     height: "300px",

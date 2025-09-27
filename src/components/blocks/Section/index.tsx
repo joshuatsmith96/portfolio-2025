@@ -11,7 +11,7 @@ export const Section = ({ children, bgImgSrc, bgImgAlt, sx }: { children: React.
             sx={sx}
             position={'relative'}
         >
-            <Image src={bgImgSrc ? bgImgSrc : ''} alt={bgImgAlt ? bgImgAlt : ''} sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0, height: '100%', objectFit: 'cover' }} />
+            {bgImgSrc ? <Image src={bgImgSrc ? bgImgSrc : ''} alt={bgImgAlt ? bgImgAlt : ''} sx={{ position: 'absolute', top: 0, left: 0, zIndex: 0, height: '100%', objectFit: 'cover' }} /> : ''}
             <Box sx={SectionStyles}>
                 {children}
             </Box>

@@ -18,7 +18,7 @@ export const useTerminalCommand = () => {
             "/help - command information",
             "/about - learn more about me",
             "/skills - learn about my skills",
-            "/fill - info about the 'fill' command",
+            "/fill - info about 'fill' command",
             "/clear - clear the command screen"
         ],
         fillCommands: [

@@ -1,0 +1,21 @@
+import { Typography, Divider } from "@mui/material"
+import { Section } from "../../blocks/Section"
+import { ProjectTile } from "../../blocks/ProjectTile"
+import { Tiles } from "../../../data/TileData"
+
+export const ProjectSection = () => {
+
+    return (
+        <Section>
+            <Divider sx={{
+                "&::before, &::after": {
+                    borderColor: "#c4c4c4ff",
+                },
+            }}>
+                <Typography color="#c4c4c4ff" px={5}>Some of my latest work</Typography>
+            </Divider>
+            {/* Rest of content here */}
+            {Tiles.map((tile) => <ProjectTile imgSrc={tile.imgSrc} imgAlt={tile.imgAlt} title={tile.title} skills={tile.skills} description={tile.description} />)}
+        </Section >
+    )
+}
