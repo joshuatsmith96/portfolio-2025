@@ -1,5 +1,5 @@
 export const NavContainerStyles = {
-    position: 'absolute',
+    position: 'fixed',
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
@@ -10,7 +10,7 @@ export const NavContainerStyles = {
 export const NavBarStyles = {
     px: 4,
     py: 1.5,
-    backgroundColor: '#ffffffa8',
+    backgroundColor: '#373737d8',
     borderRadius: 20
 }
 
