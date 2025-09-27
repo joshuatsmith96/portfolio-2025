@@ -5,6 +5,7 @@ import { FilterContext } from "../../../../contexts/FilterContext"
 import { Input } from "@mui/material"
 import { useRef } from "react"
 import { useTerminalCommand } from "./terminalCommands"
+import { FadeIn } from "../../FadeIn"
 
 export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
     const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {}
@@ -35,64 +36,66 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
 
 
     return (
-        <Box color={'white'} sx={[containerStyles, position]} zIndex={1}>
-            <Typography textAlign={'center'} variant="h5">Developer</Typography>
-            <Stack>
-                <TextField
-                    multiline
-                    ref={textRef}
-                    className="scroll-test"
-                    value={terminalText}
-                    InputProps={{
-                        readOnly: true,
-                        sx: {
-                            color: '#fff',
-                            backgroundColor: '#00000081',
-                            fontFamily: 'monospace',
-                            outline: 'none',
-                            '& .MuiOutlinedInput-notchedOutline': {
-                                border: 'none',
-                            },
-                            '&:hover .MuiOutlinedInput-notchedOutline': {
-                                border: 'none',
-                            },
-                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                                border: 'none',
-                            },
+        <FadeIn direction="right" delay={200}>
+            <Box color={'white'} sx={[containerStyles, position]} zIndex={1}>
+                <Typography textAlign={'center'} variant="h5">Developer</Typography>
+                <Stack width={'95%'}>
+                    <TextField
+                        multiline
+                        ref={textRef}
+                        className="scroll-test"
+                        value={terminalText}
+                        InputProps={{
+                            readOnly: true,
+                            sx: {
+                                color: '#fff',
+                                fontFamily: 'monospace',
+                                outline: 'none',
+                                '& .MuiOutlinedInput-notchedOutline': {
+                                    border: 'none',
+                                },
+                                '&:hover .MuiOutlinedInput-notchedOutline': {
+                                    border: 'none',
+                                },
+                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                    border: 'none',
+                                },
 
-                            /* For WebKit browsers (Chrome, Safari, Edge) */
-                            '&::-webkit-scrollbar': {
-                                width: '4px',
-                                height: '4px',
-                            },
-                            '&::-webkit-scrollbar-thumb': {
-                                backgroundColor: 'rgba(255,255,255,0.7)',
-                                borderRadius: '2px',
-                            },
-                            '&::-webkit-scrollbar-track': {
-                                background: 'transparent',
-                            },
+                                /* For WebKit browsers (Chrome, Safari, Edge) */
+                                '&::-webkit-scrollbar': {
+                                    width: '4px',
+                                    height: '4px',
+                                },
+                                '&::-webkit-scrollbar-thumb': {
+                                    backgroundColor: 'rgba(255,255,255,0.7)',
+                                    borderRadius: '2px',
+                                },
+                                '&::-webkit-scrollbar-track': {
+                                    background: 'transparent',
+                                },
 
-                            /* For Firefox */
-                            scrollbarWidth: 'thin',
-                            scrollbarColor: 'rgba(255,255,255,0.7) transparent',
-                        },
-                    }}
-                    sx={{
-                        width: '100%',
-                        height: 200,
-                        overflowY: 'auto',
-                        resize: 'none',
-                    }}
-                />
-                <Stack direction="row" width={'100%'}>
-                    <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} spacing={1}>
-                        <Typography fontWeight={'bold'}>J:/&gt; </Typography>
-                        <Input autoFocus disableUnderline inputRef={inputRef} sx={{ color: 'white' }} onKeyDown={(e) => e.key === "Enter" ? onEnter() : ''} />
+                                /* For Firefox */
+                                scrollbarWidth: 'thin',
+                                scrollbarColor: 'rgba(255,255,255,0.7) transparent',
+                            },
+                        }}
+                        sx={{
+                            width: '100%',
+                            height: 200,
+                            overflowY: 'auto',
+                            resize: 'none',
+                            padding: '0px'
+                        }}
+                    />
+                    <Stack direction="row" width={'100%'}>
+                        <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} spacing={1}>
+                            <Typography fontWeight={'bold'}>J:/&gt; </Typography>
+                            <Input autoFocus disableUnderline inputRef={inputRef} sx={{ color: 'white' }} onKeyDown={(e) => e.key === "Enter" ? onEnter() : ''} />
+                        </Stack>
+                        <Button onClick={() => onEnter()}>Enter</Button>
                     </Stack>
-                    <Button onClick={() => onEnter()}>Enter</Button>
                 </Stack>
-            </Stack>
-        </Box>
+            </Box>
+        </FadeIn>
     )
 }
