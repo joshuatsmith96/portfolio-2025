@@ -5,7 +5,7 @@ import { FilterContext } from "../../../../contexts/FilterContext"
 import { Input } from "@mui/material"
 import { useRef } from "react"
 import { useTerminalCommand } from "./terminalCommands"
-import { FadeIn } from "../../FadeIn"
+import { SlideIn } from "../../SlideIn"
 
 export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
     const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {}
@@ -36,7 +36,7 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
 
 
     return (
-        <FadeIn direction="right" delay={200}>
+        <SlideIn direction="right" delay={200}>
             <Box color={'white'} sx={[containerStyles, position]} zIndex={1}>
                 <Typography textAlign={'center'} variant="h5">Developer</Typography>
                 <Stack width={'95%'}>
@@ -96,6 +96,6 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
                     </Stack>
                 </Stack>
             </Box>
-        </FadeIn>
+        </SlideIn>
     )
 }
