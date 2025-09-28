@@ -3,7 +3,7 @@ import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
 import { useScreenSize } from "../../../utilities/getScreenSize";
 
-export const FadeIn = ({ children, direction, duration, delay }: { children: ReactElement, direction?: "right" | "left" | "up" | "down", duration?: number, delay?: number }) => {
+export const SlideIn = ({ children, direction, duration, delay }: { children: ReactElement, direction?: "right" | "left" | "up" | "down", duration?: number, delay?: number }) => {
     const [show, setShow] = useState<boolean>(false);
     const { width } = useScreenSize();
 

@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { FilterContext } from "../../../../contexts/FilterContext"
 import { CustomSlider } from "../../CustomSlider/CustomSlider"
 import { containerStyles } from "../HeroImageStyles"
-import { FadeIn } from "../../FadeIn"
+import { SlideIn } from "../../SlideIn"
 
 export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
 
@@ -28,7 +28,7 @@ export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' })
 
 
     return (
-        <FadeIn direction="left" duration={1000} delay={500}>
+        <SlideIn direction="left" duration={1000} delay={500}>
             <Box color={'white'} sx={[containerStyles, position]}>
                 <Typography textAlign={'center'} variant="h5">Designer</Typography>
                 <Typography textAlign={'center'}>Try adjusting the filters!</Typography>
@@ -39,6 +39,6 @@ export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' })
                     <CustomSlider label="Brightness" value={brightness} color="success" onChange={(_, newValue) => setBrightness(newValue as number)} />
                 </Box>
             </Box>
-        </FadeIn>
+        </SlideIn>
     )
 }

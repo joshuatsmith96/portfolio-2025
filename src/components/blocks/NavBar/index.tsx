@@ -1,11 +1,11 @@
 import { Stack } from "@mui/material"
 import { NavContainerStyles, NavBarStyles } from "./NavStyles"
 import { NavLink } from "./parts/NavLink"
-import { FadeIn } from "../FadeIn"
+import { SlideIn } from "../SlideIn"
 
 export const NavBar = () => {
     return (
-        <FadeIn>
+        <SlideIn>
             <Stack sx={NavContainerStyles}>
                 <Stack sx={NavBarStyles} direction={'row'} spacing={4}>
                     <NavLink href="Intro" selected>Intro</NavLink>
@@ -14,6 +14,6 @@ export const NavBar = () => {
                     <NavLink href="Contact">Contact</NavLink>
                 </Stack>
             </Stack>
-        </FadeIn>
+        </SlideIn>
     )
 }

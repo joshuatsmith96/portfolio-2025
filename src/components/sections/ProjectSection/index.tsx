@@ -12,10 +12,10 @@ export const ProjectSection = () => {
                     borderColor: "#c4c4c4ff",
                 },
             }}>
-                <Typography color="#c4c4c4ff" px={5}>Some of my latest work</Typography>
+                <Typography color="#c4c4c4ff" px={5} variant="h6">Some of my latest work</Typography>
             </Divider>
             {/* Rest of content here */}
-            {Tiles.map((tile) => <ProjectTile imgSrc={tile.imgSrc} imgAlt={tile.imgAlt} title={tile.title} skills={tile.skills} description={tile.description} />)}
+            {Tiles.map((tile) => <ProjectTile imgSrc={tile.imgSrc} imgAlt={tile.imgAlt} title={tile.title} skills={tile.skills} description={tile.description} githubLink={tile.githubLink} figmaLink={tile.figmaLink} demoLink={tile.demoLink} reverse={tile.reverse ? true : false} />)}
         </Section >
     )
 }
