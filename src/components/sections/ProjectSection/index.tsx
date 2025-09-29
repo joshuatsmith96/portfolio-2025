@@ -12,7 +12,7 @@ export const ProjectSection = () => {
                     borderColor: "#c4c4c4ff",
                 },
             }}>
-                <Typography color="#c4c4c4ff" px={5} variant="h6">Some of my latest work</Typography>
+                <Typography color="#c4c4c4ff" px={{ xs: 0, sm: 5 }} fontSize={{ xs: '16px' }}>Some of my latest work</Typography>
             </Divider>
             {/* Rest of content here */}
             <Stack gap={10} sx={{

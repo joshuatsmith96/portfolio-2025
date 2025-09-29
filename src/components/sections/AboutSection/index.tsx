@@ -1,5 +1,5 @@
-import { About } from "./parts/about"
-import { Experience } from "./parts/experience"
+import { About } from "./parts/About"
+import { Experience } from "./parts/Experience"
 import { Section } from "../../blocks/Section"
 import { Stack, Typography } from "@mui/material"
 
@@ -17,7 +17,7 @@ export const AboutSection = () => {
                 textAlign: 'center',
                 width: '100%'
             }}>About Me</Typography>
-            <Stack sx={{ flexDirection: { xs: 'column', lg: 'row' }, py: 10 }}>
+            <Stack sx={{ flexDirection: { xs: 'column', lg: 'row' }, py: 10, justifyContent: 'space-between' }}>
                 <About />
                 <Experience />
             </Stack>
