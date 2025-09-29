@@ -6,7 +6,7 @@ import { Tiles } from "../../../data/TileData"
 export const ProjectSection = () => {
 
     return (
-        <Section>
+        <Section sx={{ paddingBottom: '150px' }}>
             <Divider sx={{
                 "&::before, &::after": {
                     borderColor: "#c4c4c4ff",
