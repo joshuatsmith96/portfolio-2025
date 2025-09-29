@@ -3,6 +3,6 @@ export const SectionStyles = {
     zIndex: 1,
     maxWidth: {
         xl: '1400px',
-        md: '1000px'
+        lg: '1200px',
     },
 };

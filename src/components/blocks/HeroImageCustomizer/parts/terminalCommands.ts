@@ -35,8 +35,8 @@ export const useTerminalCommand = () => {
     }
 
     const skillsTable = `My skills include (but are not limited to):\n
-________________________________
 Skills         |  Proficiency
+_______________|________________
                |
 React          |  Advanced
 Node.js        |  Advanced
