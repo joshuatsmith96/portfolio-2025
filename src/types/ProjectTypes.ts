@@ -1,2 +1,2 @@
 export type SkillAttributeType = { name: string, bgColor: string }[];
-export type ProjectTileType = { imgSrc: string, imgAlt: string, title: string, skills: { name: string, bgColor: string }[], description: string, githubLink?: string, demoLink?: string, figmaLink?: string, reverse?: boolean }
+export type ProjectTileType = { imgSrc: string, imgAlt: string, title: string, skills: { name: string, bgColor: string }[], description: string, githubLink?: string, demoLink?: string, figmaLink?: string, reverse?: boolean, onView?: () => void }

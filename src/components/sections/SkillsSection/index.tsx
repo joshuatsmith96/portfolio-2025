@@ -1,4 +1,4 @@
-import { Stack, Box, Grid } from "@mui/material"
+import { Stack, Box, Grid, Slide } from "@mui/material"
 import { Section } from "../../blocks/Section"
 import { SectionHeader } from "../../blocks/SectionHeader/SectionHeader"
 import { HeaderStyles } from "./SkillStyles"
@@ -15,7 +15,24 @@ export const SkillSection = () => {
                 <Box sx={{ backgroundImage: 'linear-gradient(90deg,rgba(146, 69, 255, 1) 0%, rgba(233, 89, 255, 1) 100%)', width: { xs: '200px', md: '300px' }, height: 8, borderRadius: 10, padding: 0 }} />
             </Stack>
             <Grid container gap={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                {SkillTileData.map((skill) => <SkillTile skill={skill.skill} skillImg={skill.skillImg} value={skill.value} />)}
+                {SkillTileData.map((skill, index) => (
+                    <Slide
+                        key={index}
+                        in={true}
+                        direction={index % 2 === 0 ? 'left' : 'right'}
+                        timeout={800}
+                        mountOnEnter
+                        unmountOnExit
+                    >
+                        <Box>
+                            <SkillTile
+                                skill={skill.skill}
+                                skillImg={skill.skillImg}
+                                value={skill.value}
+                            />
+                        </Box>
+                    </Slide>
+                ))}
             </Grid>
         </Section >
     )
