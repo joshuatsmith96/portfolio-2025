@@ -1,4 +1,4 @@
-import { Box, Slide, Stack, Typography } from "@mui/material"
+import { Slide, Stack, Typography } from "@mui/material"
 import { Image } from "../Image"
 import { SkillAttribute } from "./parts/SkillAttribute"
 import type { ProjectTileType } from "../../../types/ProjectTypes"
@@ -17,7 +17,7 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
     });
 
     return (
-        <Box ref={ref}>
+        <Stack ref={ref} justifyContent={'center'} alignItems={'center'}>
             <Slide in={inView} direction={reverse ? 'left' : 'right'} timeout={800}>
                 <Stack
                     sx={{
@@ -28,7 +28,8 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
                             sm: 'column'
                         },
                         width: {
-                            sm: '80%',
+                            xs: '80%',
+                            sm: '75%',
                             md: '100%'
                         }
                     }} justifyContent={'space-between'} mt={10} gap={5}>
@@ -60,6 +61,6 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
                     </Stack>
                 </Stack >
             </Slide>
-        </Box>
+        </Stack>
     )
 }
