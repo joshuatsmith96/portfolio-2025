@@ -2,9 +2,10 @@ import { Box, Stack, type SxProps } from "@mui/material";
 import { SectionStyles } from "./styles/SectionStyles";
 import { Image } from "../Image";
 
-export const Section = ({ children, bgImgSrc, bgImgAlt, sx, imgOpacity }: { children: React.ReactNode, bgImgSrc?: string, bgImgAlt?: string, sx?: SxProps, imgOpacity?: string }) => {
+export const Section = ({ id, children, bgImgSrc, bgImgAlt, sx, imgOpacity }: { id: string, children: React.ReactNode, bgImgSrc?: string, bgImgAlt?: string, sx?: SxProps, imgOpacity?: string }) => {
     return (
         <Stack
+            id={id}
             width="100%"
             alignItems="center"
             pt={4}

@@ -9,13 +9,22 @@ import GridBG from "../../../assets/grid2.png"
 export const SkillSection = () => {
 
     return (
-        <Section bgImgSrc={GridBG} imgOpacity={"15%"}>
+        <Section id="skills" bgImgSrc={GridBG} imgOpacity={"15%"} sx={{ paddingBottom: '50px' }}>
             <Stack sx={{ width: '100%' }} gap={3} justifyContent={'center'} alignItems={'center'} mb={10}>
                 <SectionHeader sx={HeaderStyles}>Skills & Technology</SectionHeader>
                 <Box sx={{ backgroundImage: 'linear-gradient(90deg,rgba(146, 69, 255, 1) 0%, rgba(233, 89, 255, 1) 100%)', width: { xs: '200px', md: '300px' }, height: 8, borderRadius: 10, padding: 0 }} />
             </Stack>
             <Grid container gap={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                {SkillTileData.map((skill) => <SkillTile skill={skill.skill} skillImg={skill.skillImg} value={skill.value} />)}
+                {SkillTileData.map((skill, index) => (
+                    <SkillTile
+                        key={index}
+                        id={index}
+                        skill={skill.skill}
+                        skillImg={skill.skillImg}
+                        value={skill.value}
+                        barColor={skill.barColor}
+                    />
+                ))}
             </Grid>
         </Section >
     )

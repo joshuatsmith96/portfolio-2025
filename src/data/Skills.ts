@@ -17,66 +17,80 @@ export const SkillTileData = [
     {
         skill: "React",
         skillImg: ReactIcon,
-        value: 96
+        value: 96,
+        barColor: "linear-gradient(to right, #61DAFB, #0B0B0B)"
     },
     {
         skill: "HTML5",
         skillImg: HTML,
-        value: 95
+        value: 95,
+        barColor: "linear-gradient(to right, #F16529, #E44D26)"
     },
     {
         skill: "CSS",
         skillImg: CSS,
-        value: 95
+        value: 95,
+        barColor: "linear-gradient(to right, #2965F1, #264DE4)"
     },
     {
         skill: "JavaScript",
         skillImg: JSIcon,
-        value: 95
+        value: 95,
+        barColor: "linear-gradient(to right, #F7DF1E, #F0DB4F)"
     },
     {
         skill: "TypeScript",
         skillImg: TSIcon,
-        value: 85
+        value: 85,
+        barColor: "linear-gradient(to right, #007ACC, #3178C6)"
     },
     {
         skill: "Tailwind CSS",
         skillImg: TailwindIcon,
-        value: 80
+        value: 80,
+        barColor: "linear-gradient(to right, #06B6D4, #3B82F6)"
     },
     {
         skill: "NodeJS",
         skillImg: NodeJS,
-        value: 75
+        value: 75,
+        barColor: "linear-gradient(to right, #3C873A, #68A063)"
     },
     {
         skill: "ProfoundJS",
         skillImg: ProfoundJS,
-        value: 70
+        value: 70,
+        barColor: "linear-gradient(to right, #0082C9, #F57900)"
     },
     {
         skill: "MUI",
         skillImg: MUIcon,
-        value: 70
+        value: 70,
+        barColor: "linear-gradient(to right, #007FFF, #0059B2)"
     },
     {
         skill: "Next.js",
         skillImg: NextJSIcon,
-        value: 60
+        value: 60,
+        barColor: "linear-gradient(to right, #000000, #434343)"
     },
     {
         skill: "PostgreSQL",
         skillImg: SQL,
-        value: 60
+        value: 60,
+        barColor: "linear-gradient(to right, #336791, #1D3557)"
     },
     {
         skill: "MongoDB",
         skillImg: MongoDB,
-        value: 60
+        value: 60,
+        barColor: "linear-gradient(to right, #4DB33D, #3FA037)"
     },
     {
         skill: "Python",
         skillImg: Python,
-        value: 40
+        value: 40,
+        barColor: "linear-gradient(to right, #306998, #FFD43B)"
     }
 ]
+
