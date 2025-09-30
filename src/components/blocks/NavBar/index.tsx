@@ -8,10 +8,9 @@ export const NavBar = () => {
         <SlideIn>
             <Stack sx={NavContainerStyles}>
                 <Stack sx={NavBarStyles} direction={'row'} spacing={4}>
-                    <NavLink href="Intro" selected>Intro</NavLink>
-                    <NavLink href="Projects">Projects</NavLink>
-                    <NavLink href="About">About</NavLink>
-                    <NavLink href="Contact">Contact</NavLink>
+                    <NavLink href="#projects">Projects</NavLink>
+                    <NavLink href="#about">About</NavLink>
+                    <NavLink href="#skills">Skills</NavLink>
                 </Stack>
             </Stack>
         </SlideIn>

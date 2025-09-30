@@ -25,7 +25,7 @@ export const Experience = () => {
                             </Box>
                         </Stack>
                         <Stack gap={2} mt={3}>
-                            {experience.duties.map((duty) => <CustomListItem>{duty}</CustomListItem>)}
+                            {experience.duties.map((duty, index) => <CustomListItem key={index}>{duty}</CustomListItem>)}
                         </Stack>
                     </Stack>)}
                 </Stack>

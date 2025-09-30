@@ -6,7 +6,7 @@ import { Tiles } from "../../../data/TileData"
 export const ProjectSection = () => {
 
     return (
-        <Section sx={{ paddingBottom: '150px' }}>
+        <Section sx={{ paddingBottom: '150px' }} id="projects">
             <Divider sx={{
                 "&::before, &::after": {
                     borderColor: "#c4c4c4ff",
@@ -19,7 +19,20 @@ export const ProjectSection = () => {
                 alignItems: { sm: 'center' },
                 justifyContent: { sm: 'center' },
             }}>
-                {Tiles.map((tile) => <ProjectTile imgSrc={tile.imgSrc} imgAlt={tile.imgAlt} title={tile.title} skills={tile.skills} description={tile.description} githubLink={tile.githubLink} figmaLink={tile.figmaLink} demoLink={tile.demoLink} reverse={tile.reverse ? true : false} />)}
+                {Tiles.map((tile, index) => (
+                    <ProjectTile
+                        key={index}
+                        imgSrc={tile.imgSrc}
+                        imgAlt={tile.imgAlt}
+                        title={tile.title}
+                        skills={tile.skills}
+                        description={tile.description}
+                        githubLink={tile.githubLink}
+                        figmaLink={tile.figmaLink}
+                        demoLink={tile.demoLink}
+                        reverse={tile.reverse ? true : false}
+                    />
+                ))}
             </Stack>
         </Section >
     )
