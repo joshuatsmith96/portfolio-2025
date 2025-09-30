@@ -1,6 +1,6 @@
-import { Box, Stack, Typography } from "@mui/material"
-import { CustomListItem } from "./ListItem"
-import { ExperienceData } from "../../../../data/ExperienceData"
+import { Box, Stack, Typography } from '@mui/material';
+import { CustomListItem } from './ListItem';
+import { ExperienceData } from '../../../../data/ExperienceData';
 
 export const Experience = () => {
 
@@ -31,5 +31,5 @@ export const Experience = () => {
                 </Stack>
             </Stack>
         </Stack>
-    )
-}
+    );
+};

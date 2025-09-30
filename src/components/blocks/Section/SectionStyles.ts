@@ -13,5 +13,5 @@ export const SectionBackgroundImageStyles = {
     left: 0,
     zIndex: 0,
     height: '80vh',
-    objectFit: "cover"
+    objectFit: 'cover'
 };

@@ -1,12 +1,12 @@
-import { Slide, Stack, Typography } from "@mui/material"
-import { Image } from "../Image"
-import { SkillAttribute } from "./parts/SkillAttribute"
-import type { ProjectTileType } from "../../../types/ProjectTypes"
-import { ButtonLink } from "./parts/ButtonLinks"
+import { Slide, Stack, Typography } from '@mui/material';
+import { Image } from '../Image';
+import { SkillAttribute } from './parts/SkillAttribute';
+import type { ProjectTileType } from '../../../types/ProjectTypes';
+import { ButtonLink } from './parts/ButtonLinks';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Enter from '@mui/icons-material/Login';
 import FigmaIcon from '../../../assets/figma-logo.svg';
-import { useInView } from "react-intersection-observer";
+import { useInView } from 'react-intersection-observer';
 
 
 export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, githubLink, demoLink, figmaLink, reverse }: ProjectTileType) => {
@@ -33,13 +33,13 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
                             md: '100%'
                         }
                     }} justifyContent={'space-between'} mt={10} gap={5}>
-                    <Image src={imgSrc} alt={imgAlt} sx={{ width: { lg: '550px', md: "350px" }, height: { lg: '350px', md: '100%' } }} />
+                    <Image src={imgSrc} alt={imgAlt} sx={{ width: { lg: '550px', md: '350px' }, height: { lg: '350px', md: '100%' } }} />
                     <Stack sx={{ width: { md: '500px', sm: '100%' } }} justifyContent={'space-between'} gap={4}>
                         <Stack gap={1} sx={{ width: { sm: '100%' } }}>
                             <Typography color="#ffffff" fontSize={'42px'}>{title}</Typography>
                             <Stack direction={'row'} spacing={1}>
                                 {skills ? skills.map((skill, index) => {
-                                    return <SkillAttribute key={index} bgColor={skill.bgColor}>{skill.name}</SkillAttribute>
+                                    return <SkillAttribute key={index} bgColor={skill.bgColor}>{skill.name}</SkillAttribute>;
                                 }) : ''}
                             </Stack>
                         </Stack>
@@ -62,5 +62,5 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
                 </Stack >
             </Slide>
         </Stack>
-    )
-}
+    );
+};

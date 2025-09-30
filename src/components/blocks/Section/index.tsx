@@ -1,6 +1,6 @@
-import { Box, Stack, type SxProps } from "@mui/material";
-import { SectionStyles } from "./styles/SectionStyles";
-import { Image } from "../Image";
+import { Box, Stack, type SxProps } from '@mui/material';
+import { SectionStyles } from './styles/SectionStyles';
+import { Image } from '../Image';
 
 export const Section = ({ id, children, bgImgSrc, bgImgAlt, sx, imgOpacity }: { id: string, children: React.ReactNode, bgImgSrc?: string, bgImgAlt?: string, sx?: SxProps, imgOpacity?: string }) => {
     return (

@@ -1,9 +1,9 @@
-import { SocialLink } from "./Parts/SocialMediaLink"
-import { Image } from "../../blocks/Image"
-import { Stack, Typography } from "@mui/material"
-import TestImage from "../../../assets/pattern1.png"
-import LinkedIn from '../../../assets/linkedinv3.png'
-import GitHub from '../../../assets/GitHub.png'
+import { SocialLink } from './Parts/SocialMediaLink';
+import { Image } from '../../blocks/Image';
+import { Stack, Typography } from '@mui/material';
+import TestImage from '../../../assets/pattern1.png';
+import LinkedIn from '../../../assets/linkedinv3.png';
+import GitHub from '../../../assets/GitHub.png';
 
 export const Footer = () => {
 
@@ -31,5 +31,5 @@ export const Footer = () => {
                 <Typography color="#5d5d5dff" fontSize={'12px'}>Made with React and Typescript</Typography>
             </Stack>
         </Stack>
-    )
-}
+    );
+};

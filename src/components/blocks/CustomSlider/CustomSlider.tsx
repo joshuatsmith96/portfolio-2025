@@ -1,6 +1,5 @@
-import { Box } from "@mui/material"
-import { Slider, Typography } from "@mui/material"
-import type { SliderColorTypes } from "../../../types/SliderColorTypes"
+import { Slider, Typography, Box } from '@mui/material';
+import type { SliderColorTypes } from '../../../types/SliderColorTypes';
 
 export const CustomSlider = ({
     label,
@@ -11,7 +10,7 @@ export const CustomSlider = ({
     label: string,
     value: number,
     color: SliderColorTypes,
-    onChange: (event: Event, value: number | number[]) => void;
+    onChange: (_event: Event, _value: number | number[]) => void;
 }) => {
 
     return (
@@ -25,5 +24,5 @@ export const CustomSlider = ({
                 onChange={onChange}
             />
         </Box>
-    )
-}
+    );
+};

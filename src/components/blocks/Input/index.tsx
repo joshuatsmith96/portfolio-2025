@@ -1,5 +1,5 @@
-import { TextField, InputAdornment } from "@mui/material";
-import type { SxProps, Theme } from "@mui/material/styles";
+import { TextField, InputAdornment } from '@mui/material';
+import type { SxProps, Theme } from '@mui/material/styles';
 
 export const Input = ({
     label,
@@ -7,7 +7,7 @@ export const Input = ({
     sx = [],
     multiline,
     onChange,
-}: { label: string; id?: string; sx?: SxProps<Theme>, multiline?: boolean, onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; }) => {
+}: { label: string; id?: string; sx?: SxProps<Theme>, multiline?: boolean, onChange?: (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; }) => {
     return (
         <TextField
             id={id}
@@ -19,24 +19,24 @@ export const Input = ({
             maxRows={8}
             sx={[
                 {
-                    width: "100%",
-                    color: "white",
-                    background: "#646464ff",
-                    "& .MuiInputBase-input": {
-                        color: "white",
+                    width: '100%',
+                    color: 'white',
+                    background: '#646464ff',
+                    '& .MuiInputBase-input': {
+                        color: 'white',
                     },
                     borderRadius: 2,
-                    "& .MuiInputLabel-root": {
-                        color: "white",
+                    '& .MuiInputLabel-root': {
+                        color: 'white',
                     },
-                    "& .MuiInputLabel-root.Mui-focused": {
-                        color: "white",
+                    '& .MuiInputLabel-root.Mui-focused': {
+                        color: 'white',
                     },
-                    "& .MuiFilledInput-underline:hover:before": {
-                        borderBottomColor: "#edf8ffff",
+                    '& .MuiFilledInput-underline:hover:before': {
+                        borderBottomColor: '#edf8ffff',
                     },
-                    "& .MuiFilledInput-underline:after": {
-                        borderBottomColor: "#8dd3ffff",
+                    '& .MuiFilledInput-underline:after': {
+                        borderBottomColor: '#8dd3ffff',
                     },
                 },
                 ...(Array.isArray(sx) ? sx : [sx]),
@@ -44,7 +44,7 @@ export const Input = ({
             slotProps={{
                 input: {
                     startAdornment: (
-                        <InputAdornment position="start" sx={{ color: "white" }} />
+                        <InputAdornment position="start" sx={{ color: 'white' }} />
                     ),
                 },
             }}

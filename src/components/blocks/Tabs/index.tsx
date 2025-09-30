@@ -1,6 +1,6 @@
 // ReusableTabs.tsx
-import React from "react";
-import { Tabs, Tab, Box, Stack } from "@mui/material";
+import React from 'react';
+import { Tabs, Tab, Box, Stack } from '@mui/material';
 
 interface TabItem {
     label: string;
@@ -10,14 +10,14 @@ interface TabItem {
 interface ReusableTabsProps {
     tabs: TabItem[];
     defaultTab?: number;
-    orientation?: "horizontal" | "vertical";
+    orientation?: 'horizontal' | 'vertical';
     sx?: object;
 }
 
 export const CustomTab: React.FC<ReusableTabsProps> = ({
     tabs,
     defaultTab = 0,
-    orientation = "horizontal",
+    orientation = 'horizontal',
     sx = {},
 }) => {
     const [currentTab, setCurrentTab] = React.useState(defaultTab);
@@ -27,7 +27,7 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
     };
 
     return (
-        <Box sx={{ width: "100%", ...sx }}>
+        <Box sx={{ width: '100%', ...sx }}>
             <Stack alignItems={'center'} display={'flex'} justifyContent={'center'}>
                 <Tabs
                     value={currentTab}
@@ -36,8 +36,8 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
                     variant="scrollable"
                     scrollButtons="auto"
                     sx={{
-                        "& .MuiTabs-indicator": {
-                            backgroundColor: "white",
+                        '& .MuiTabs-indicator': {
+                            backgroundColor: 'white',
                         },
                     }}
                 >
@@ -48,13 +48,13 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
                                 key={index}
                                 label={tab.label}
                                 sx={{
-                                    color: "white",
-                                    "&.Mui-selected": {
-                                        color: "white",
+                                    color: 'white',
+                                    '&.Mui-selected': {
+                                        color: 'white',
                                     },
                                 }}
                             />
-                        )
+                        );
                     })}
                 </Tabs>
             </Stack>
@@ -66,7 +66,7 @@ export const CustomTab: React.FC<ReusableTabsProps> = ({
                         role="tabpanel"
                         hidden={currentTab !== index}
                     >
-                        {currentTab === index && <Box sx={{ color: "white", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{tab.content}</Box>}
+                        {currentTab === index && <Box sx={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>{tab.content}</Box>}
                     </div>
                 ))}
             </Box>

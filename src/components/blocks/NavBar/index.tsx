@@ -1,7 +1,7 @@
-import { Stack } from "@mui/material"
-import { NavContainerStyles, NavBarStyles } from "./NavStyles"
-import { NavLink } from "./parts/NavLink"
-import { SlideIn } from "../SlideIn"
+import { Stack } from '@mui/material';
+import { NavContainerStyles, NavBarStyles } from './NavStyles';
+import { NavLink } from './parts/NavLink';
+import { SlideIn } from '../SlideIn';
 
 export const NavBar = () => {
     return (
@@ -14,5 +14,5 @@ export const NavBar = () => {
                 </Stack>
             </Stack>
         </SlideIn>
-    )
-}
+    );
+};

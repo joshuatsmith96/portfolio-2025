@@ -1,15 +1,15 @@
-import { Typography, Divider, Stack } from "@mui/material"
-import { Section } from "../../blocks/Section"
-import { ProjectTile } from "../../blocks/ProjectTile"
-import { Tiles } from "../../../data/TileData"
+import { Typography, Divider, Stack } from '@mui/material';
+import { Section } from '../../blocks/Section';
+import { ProjectTile } from '../../blocks/ProjectTile';
+import { Tiles } from '../../../data/TileData';
 
 export const ProjectSection = () => {
 
     return (
         <Section sx={{ paddingBottom: '150px' }} id="projects">
             <Divider sx={{
-                "&::before, &::after": {
-                    borderColor: "#c4c4c4ff",
+                '&::before, &::after': {
+                    borderColor: '#c4c4c4ff',
                 },
             }}>
                 <Typography color="#c4c4c4ff" px={{ xs: 0, sm: 5 }} fontSize={{ xs: '16px' }}>Some of my latest work</Typography>
@@ -35,5 +35,5 @@ export const ProjectSection = () => {
                 ))}
             </Stack>
         </Section >
-    )
-}
+    );
+};

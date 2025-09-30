@@ -1,7 +1,6 @@
-import { Stack } from "@mui/material"
-import { Image } from "../../../blocks/Image"
-import TestImage from '../../../../assets/pattern1.png'
-import { Typography } from "@mui/material"
+import { Stack, Typography } from '@mui/material';
+import { Image } from '../../../blocks/Image';
+import TestImage from '../../../../assets/pattern1.png';
 import PlaceIcon from '@mui/icons-material/Place';
 
 export const About = () => {
@@ -26,5 +25,5 @@ export const About = () => {
             </Stack>
             <Typography sx={{ color: '#ffffff', fontSize: '18px', fontWeight: 'thin', textAlign: 'center' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
         </Stack>
-    )
-}
+    );
+};

@@ -1,9 +1,9 @@
-import { Stack, FormControl, Typography, Button } from "@mui/material"
+import { Stack, FormControl, Typography, Button } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import { Section } from "../../blocks/Section"
-import { SectionHeader } from "../../blocks/SectionHeader/SectionHeader"
-import { Input } from "../../blocks/Input"
-import { useEffect, useState } from "react";
+import { Section } from '../../blocks/Section';
+import { SectionHeader } from '../../blocks/SectionHeader/SectionHeader';
+import { Input } from '../../blocks/Input';
+import { useState } from 'react';
 
 export const ContactSection = () => {
 
@@ -14,9 +14,11 @@ export const ContactSection = () => {
     const [message, setMessage] = useState<string>('');
 
     const submitData = () => {
-        const allData = [name, company, email, phone, message]
-        console.log(allData)
-    }
+        const allData = [name, company, email, phone, message];
+
+        /* eslint-disable-next-line no-console */
+        console.log(allData);
+    };
 
     return (
         <Section id="contact" sx={{ pb: 10, backgroundColor: '#232323ff' }}>
@@ -39,5 +41,5 @@ export const ContactSection = () => {
                 </Stack>
             </FormControl>
         </Section >
-    )
-}
+    );
+};

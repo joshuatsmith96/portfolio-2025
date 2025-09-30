@@ -11,7 +11,7 @@ export const ButtonLinkContainerStyles = {
         color: 'white',
         boxShadow: 3
     },
-}
+};
 
 export const ButtonLinkStyles = {
     width: '100%',
@@ -20,4 +20,4 @@ export const ButtonLinkStyles = {
     '&:hover': {
         fontWeight: 'bold'
     },
-}
+};

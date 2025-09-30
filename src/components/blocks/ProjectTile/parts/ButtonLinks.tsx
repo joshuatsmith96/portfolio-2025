@@ -1,6 +1,6 @@
-import { Link, Stack } from "@mui/material";
-import type { ReactNode } from "react";
-import { ButtonLinkContainerStyles, ButtonLinkStyles } from "../ProjectTileStyles";
+import { Link, Stack } from '@mui/material';
+import type { ReactNode } from 'react';
+import { ButtonLinkContainerStyles, ButtonLinkStyles } from '../ProjectTileStyles';
 
 export const ButtonLink = ({ children, href }: { children: ReactNode, href: string }) => {
 
@@ -10,5 +10,5 @@ export const ButtonLink = ({ children, href }: { children: ReactNode, href: stri
                 {children}
             </Stack>
         </Link>
-    )
-}
+    );
+};

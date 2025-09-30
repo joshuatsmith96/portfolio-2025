@@ -1,14 +1,12 @@
-import { Box, Button, Stack, TextField, Typography } from "@mui/material"
-import { containerStyles } from '../HeroImageStyles'
-import { useContext } from "react"
-import { FilterContext } from "../../../../contexts/FilterContext"
-import { Input } from "@mui/material"
-import { useRef } from "react"
-import { useTerminalCommand } from "./terminalCommands"
-import { SlideIn } from "../../SlideIn"
+import { Box, Button, Stack, TextField, Typography, Input } from '@mui/material';
+import { containerStyles } from '../HeroImageStyles';
+import { useContext, useRef } from 'react';
+import { FilterContext } from '../../../../contexts/FilterContext';
+import { useTerminalCommand } from './terminalCommands';
+import { SlideIn } from '../../SlideIn';
 
 export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
-    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {}
+    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', left: '2%' } : {};
     const inputRef = useRef<HTMLInputElement | null>(null);
     const textRef = useRef<HTMLDivElement | null>(null);
 
@@ -19,17 +17,17 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
     const onEnter = () => {
         const value = inputRef.current?.value;
 
-        setTerminalText(terminalText + `\nJ:/> ${value}`)
+        setTerminalText(terminalText + `\nJ:/> ${value}`);
 
         terminalCommand(value);
 
-        if (inputRef.current) inputRef.current.value = '';
+        if (inputRef.current) { inputRef.current.value = ''; }
 
         setTimeout(() => {
             if (textRef.current) {
-                textRef.current.scrollTop = textRef.current.scrollHeight
+                textRef.current.scrollTop = textRef.current.scrollHeight;
             }
-        }, 0)
+        }, 0);
 
     };
 
@@ -88,14 +86,14 @@ export const DeveloperInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }
                         }}
                     />
                     <Stack direction="row" width={'100%'}>
-                        <Stack direction={"row"} justifyContent={"center"} alignItems={"center"} spacing={1}>
+                        <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} spacing={1}>
                             <Typography fontWeight={'bold'}>J:/&gt; </Typography>
-                            <Input autoFocus disableUnderline inputRef={inputRef} sx={{ color: 'white' }} onKeyDown={(e) => e.key === "Enter" ? onEnter() : ''} />
+                            <Input autoFocus disableUnderline inputRef={inputRef} sx={{ color: 'white' }} onKeyDown={(e) => e.key === 'Enter' ? onEnter() : ''} />
                         </Stack>
                         <Button onClick={() => onEnter()}>Enter</Button>
                     </Stack>
                 </Stack>
             </Box>
         </SlideIn>
-    )
-}
+    );
+};

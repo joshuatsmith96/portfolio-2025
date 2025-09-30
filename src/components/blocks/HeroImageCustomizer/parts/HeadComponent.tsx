@@ -1,9 +1,9 @@
-import { Box, Fade } from "@mui/material"
-import { Image } from "../../Image"
-import HeadLeft from '../../../../assets/me-left.png'
-import HeadRight from '../../../../assets/me-right.png'
-import { FilterContext } from "../../../../contexts/FilterContext"
-import { useContext, useEffect, useState } from "react"
+import { Box, Fade } from '@mui/material';
+import { Image } from '../../Image';
+import HeadLeft from '../../../../assets/me-left.png';
+import HeadRight from '../../../../assets/me-right.png';
+import { FilterContext } from '../../../../contexts/FilterContext';
+import { useContext, useEffect, useState } from 'react';
 
 export const HeadComponent = () => {
     const [show, setShow] = useState(false);
@@ -26,8 +26,8 @@ export const HeadComponent = () => {
     };
 
     useEffect(() => {
-        setShow(true)
-    }, [])
+        setShow(true);
+    }, []);
 
 
     return (
@@ -52,5 +52,5 @@ export const HeadComponent = () => {
                 <Image src={HeadRight} alt="Self Portrait - Right Side" sx={{ width: { xs: '132px', sm: '163px', md: '233px' }, filter: `saturate(${saturation * 5}%) contrast(${contrast * 2}%) brightness(${brightness * 2}%)` }} />
             </Box>
         </Fade>
-    )
-}
+    );
+};

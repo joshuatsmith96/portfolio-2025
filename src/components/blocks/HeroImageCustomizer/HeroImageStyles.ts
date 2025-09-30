@@ -4,7 +4,7 @@ export const containerStyles = {
     border: 'solid #3c3c3cff thin',
     width: '100%',
     maxWidth: '350px',
-    height: "300px",
+    height: '300px',
     borderRadius: 1,
     zIndex: 1,
     display: 'flex',

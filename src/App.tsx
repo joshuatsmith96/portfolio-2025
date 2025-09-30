@@ -1,5 +1,5 @@
-import './App.css'
-import { Home } from './pages/Home'
+import './App.css';
+import { Home } from './pages/Home';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Footer } from './components/sections/Footer/Footer';
 import { NavBar } from './components/blocks/NavBar';
@@ -26,7 +26,7 @@ function App() {
         <Footer />
       </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

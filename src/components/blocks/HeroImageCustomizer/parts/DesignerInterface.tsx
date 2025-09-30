@@ -1,9 +1,9 @@
-import { Box, Button, Typography } from "@mui/material"
-import { useContext } from "react"
-import { FilterContext } from "../../../../contexts/FilterContext"
-import { CustomSlider } from "../../CustomSlider/CustomSlider"
-import { containerStyles } from "../HeroImageStyles"
-import { SlideIn } from "../../SlideIn"
+import { Box, Button, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { FilterContext } from '../../../../contexts/FilterContext';
+import { CustomSlider } from '../../CustomSlider/CustomSlider';
+import { containerStyles } from '../HeroImageStyles';
+import { SlideIn } from '../../SlideIn';
 
 export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' }) => {
 
@@ -21,9 +21,9 @@ export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' })
         setContrast(50);
         setSaturation(20);
         setBrightness(50);
-    }
+    };
 
-    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', right: '2%' } : {}
+    const position = screen === 'desktop' ? { position: 'absolute', top: '10%', right: '2%' } : {};
 
 
 
@@ -40,5 +40,5 @@ export const DesignerInterface = ({ screen }: { screen?: 'desktop' | 'mobile' })
                 </Box>
             </Box>
         </SlideIn>
-    )
-}
+    );
+};

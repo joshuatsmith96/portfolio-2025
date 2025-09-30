@@ -19,5 +19,17 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      quotes: ['error', 'single', { avoidEscape: true }],
+      // --- Possible Errors / Best Practices ---
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-duplicate-imports': 'error',
+      eqeqeq: ['error', 'always'],
+      curly: ['error', 'all'],
+      semi: ['error', 'always'],
+      'no-constant-condition': 'warn',
+    },
   },
 ])

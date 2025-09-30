@@ -1,15 +1,14 @@
-import { Slide, Fade } from "@mui/material";
-import type { ReactElement } from "react";
-import { useEffect, useState } from "react";
-import { useScreenSize } from "../../../utilities/getScreenSize";
+import { Slide, Fade } from '@mui/material';
+import { useEffect, useState, type ReactElement } from 'react';
+import { useScreenSize } from '../../../utilities/getScreenSize';
 
-export const SlideIn = ({ children, direction, duration, delay }: { children: ReactElement, direction?: "right" | "left" | "up" | "down", duration?: number, delay?: number }) => {
+export const SlideIn = ({ children, direction, duration, delay }: { children: ReactElement, direction?: 'right' | 'left' | 'up' | 'down', duration?: number, delay?: number }) => {
     const [show, setShow] = useState<boolean>(false);
     const { width } = useScreenSize();
 
     useEffect(() => {
-        setShow(true)
-    }, [])
+        setShow(true);
+    }, []);
 
     return (
         <>
@@ -22,5 +21,5 @@ export const SlideIn = ({ children, direction, duration, delay }: { children: Re
                 :
                 children}
         </>
-    )
-}
+    );
+};

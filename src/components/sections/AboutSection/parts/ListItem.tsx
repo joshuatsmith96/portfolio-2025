@@ -1,6 +1,6 @@
-import { Box, Slide, Stack, Typography } from "@mui/material"
-import type { ReactNode } from "react"
-import { useInView } from "react-intersection-observer";
+import { Box, Slide, Stack, Typography } from '@mui/material';
+import type { ReactNode } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export const CustomListItem = ({ children }: { children: ReactNode }) => {
 
@@ -18,5 +18,5 @@ export const CustomListItem = ({ children }: { children: ReactNode }) => {
                 </Stack>
             </Slide>
         </Box>
-    )
-}
+    );
+};

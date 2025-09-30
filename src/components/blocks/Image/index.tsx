@@ -1,4 +1,4 @@
-import { Box, type SxProps, type Theme } from "@mui/material"
+import { Box, type SxProps, type Theme } from '@mui/material';
 
 export const Image = ({ src, alt, sx }: { src: string, alt: string, sx?: SxProps<Theme> }) => {
     return (
@@ -10,5 +10,5 @@ export const Image = ({ src, alt, sx }: { src: string, alt: string, sx?: SxProps
             height={'auto'}
             sx={sx}
         />
-    )
-}
+    );
+};

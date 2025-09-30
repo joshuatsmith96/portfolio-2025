@@ -1,9 +1,9 @@
-import { About } from "./parts/About"
-import { Experience } from "./parts/Experience"
-import { Section } from "../../blocks/Section"
-import { Stack } from "@mui/material"
-import { SectionHeader } from "../../blocks/SectionHeader/SectionHeader"
-import { HeaderStyles } from "./AboutStyles"
+import { About } from './parts/About';
+import { Experience } from './parts/Experience';
+import { Section } from '../../blocks/Section';
+import { Stack } from '@mui/material';
+import { SectionHeader } from '../../blocks/SectionHeader/SectionHeader';
+import { HeaderStyles } from './AboutStyles';
 
 
 export const AboutSection = () => {
@@ -16,5 +16,5 @@ export const AboutSection = () => {
                 <Experience />
             </Stack>
         </Section>
-    )
-}
+    );
+};
