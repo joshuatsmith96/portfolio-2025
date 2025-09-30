@@ -26,7 +26,7 @@ export const ProjectTile = ({ imgSrc, imgAlt, title, skills, description, github
             <Image src={imgSrc} alt={imgAlt} sx={{ width: { lg: '550px', md: "350px" }, height: { lg: '350px', md: '100%' } }} />
             <Stack sx={{ width: { md: '500px', sm: '100%' } }} justifyContent={'space-between'} gap={4}>
                 <Stack gap={1} sx={{ width: { sm: '100%' } }}>
-                    <Typography variant="h3" color="#ffffff">{title}</Typography>
+                    <Typography color="#ffffff" fontSize={'42px'}>{title}</Typography>
                     <Stack direction={'row'} spacing={1}>
                         {skills ? skills.map((skill) => {
                             return <SkillAttribute bgColor={skill.bgColor}>{skill.name}</SkillAttribute>
