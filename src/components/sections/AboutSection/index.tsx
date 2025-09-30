@@ -1,22 +1,16 @@
 import { About } from "./parts/About"
 import { Experience } from "./parts/Experience"
 import { Section } from "../../blocks/Section"
-import { Stack, Typography } from "@mui/material"
+import { Stack } from "@mui/material"
+import { SectionHeader } from "../../blocks/SectionHeader/SectionHeader"
+import { HeaderStyles } from "./AboutStyles"
+
 
 export const AboutSection = () => {
 
     return (
         <Section sx={{ bgcolor: '#2F2F2F' }}>
-            <Typography variant="h3" sx={{
-                background: 'linear-gradient(90deg, rgba(146, 69, 255, 1) 0%, rgba(233, 89, 255, 1) 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                color: 'transparent',
-                display: 'inline-block',
-                fontWeight: 'bold',
-                textAlign: 'center',
-                width: '100%'
-            }}>About Me</Typography>
+            <SectionHeader sx={HeaderStyles}>About Me</SectionHeader>
             <Stack sx={{ flexDirection: { xs: 'column', lg: 'row' }, py: 10, justifyContent: 'space-between' }}>
                 <About />
                 <Experience />

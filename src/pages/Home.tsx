@@ -3,6 +3,7 @@ import { NavBar } from "../components/blocks/NavBar"
 import { HeroSection } from "../components/sections/HeroSection"
 import { ProjectSection } from "../components/sections/ProjectSection"
 import { AboutSection } from "../components/sections/AboutSection"
+import { SkillSection } from "../components/sections/SkillsSection"
 
 export const Home = () => {
     return (
@@ -11,6 +12,7 @@ export const Home = () => {
             <HeroSection />
             <ProjectSection />
             <AboutSection />
+            <SkillSection />
         </Stack>
     )
 }
