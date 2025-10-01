@@ -1,10 +1,10 @@
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 html {
-    background-color: #111111;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  background-color: #111111;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
 }
