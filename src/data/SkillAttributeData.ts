@@ -5,3 +5,7 @@ export const TypeScript = {
 };
 export const MUI = { name: 'MUI', bgColor: 'rgba(163, 4, 249, 1)' };
 export const ESLint = { name: 'ESLint', bgColor: 'rgba(91, 0, 140, 1)' };
+export const Tailwind = {
+  name: 'TailwindCSS',
+  bgColor: 'rgba(4, 130, 255, 1)',
+};
