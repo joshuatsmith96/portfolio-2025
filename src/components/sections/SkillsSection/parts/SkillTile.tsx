@@ -34,7 +34,7 @@ export const SkillTile = ({
             border: 'solid thin #6c6c6cff',
             borderRadius: 2,
             padding: 2,
-            height: '150px',
+            height: '160px',
             justifyContent: 'space-between',
           }}
           gap={2}

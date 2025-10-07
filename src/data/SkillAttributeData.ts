@@ -9,3 +9,5 @@ export const Tailwind = {
   name: 'TailwindCSS',
   bgColor: 'rgba(4, 130, 255, 1)',
 };
+export const NodeJS = { name: 'NodeJS', bgColor: '#68A063' };
+export const GeminiAI = { name: 'Gemini AI', bgColor: '#078EFA' };

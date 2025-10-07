@@ -1,9 +1,41 @@
 import type { ProjectTileType } from '../types/ProjectTypes';
-import { React, TypeScript, MUI, ESLint, Tailwind } from './SkillAttributeData';
+import {
+  React,
+  TypeScript,
+  MUI,
+  ESLint,
+  Tailwind,
+  NodeJS,
+  GeminiAI,
+} from './SkillAttributeData';
 import PortfolioSite from '../assets/project-images/portfolio-image.png';
 import SoleStyle from '../assets/project-images/solestyle.png';
+import AIFactChecker from '../assets/project-images/AI Fact Checker.png';
 
 export const Tiles: ProjectTileType[] = [
+  {
+    imgSrc: AIFactChecker,
+    imgAlt: 'AI Fact Checker website thumbnail',
+    title: 'AI Fact Checker',
+    skills: [React, TypeScript, MUI, NodeJS, GeminiAI],
+    description:
+      'A simple to use fact checker that utilizes AI to generate a dashboard of information based on a claim.',
+    githubLink: 'https://github.com/joshuatsmith96/ai-fact-checker-2',
+    demoLink: 'https://aifactchecker.joshuasportfolio.org/',
+  },
+  {
+    imgSrc: SoleStyle,
+    imgAlt: 'SoleStyle ecommerce mockup image',
+    title: 'SoleStyle - Ecommerce',
+    skills: [React, TypeScript, Tailwind],
+    description:
+      'This site is a demonstration of my front-end skills. I built it as a way to explore creating a front-end eCommerce platform. You’ll notice there’s no backend, and that’s intentional. The focus is entirely on the frontend, while still giving the appearance of dynamic backend responses.',
+    githubLink: 'https://github.com/joshuatsmith96/portfolio-2025',
+    demoLink: 'https://solestyle.joshuasportfolio.org',
+    figmaLink:
+      'https://www.figma.com/design/bVs4UssoLMTQxPlMAeKtkC/Untitled?node-id=0-1&p=f&t=5aMPw4xXeYHsYE6I-0',
+    reverse: true,
+  },
   {
     imgSrc: PortfolioSite,
     imgAlt: 'Screenshot of Joshuas Portfolio (this page)',
@@ -14,17 +46,5 @@ export const Tiles: ProjectTileType[] = [
     githubLink: 'https://github.com/joshuatsmith96/portfolio-2025',
     figmaLink:
       'https://www.figma.com/design/bVs4UssoLMTQxPlMAeKtkC/Untitled?node-id=0-1&p=f&t=5aMPw4xXeYHsYE6I-0',
-  },
-  {
-    imgSrc: SoleStyle,
-    imgAlt: 'SoleStyle ecommerce mockup image',
-    title: 'SoleStyle - Ecommerce',
-    skills: [React, TypeScript, Tailwind],
-    description:
-      'This site is a demonstration of my front-end skills. I built it as a way to explore creating a front-end eCommerce platform. You’ll notice there’s no backend, and that’s intentional. The focus is entirely on the frontend, while still giving the appearance of dynamic backend responses.',
-    githubLink: 'https://github.com/joshuatsmith96/portfolio-2025',
-    figmaLink:
-      'https://www.figma.com/design/bVs4UssoLMTQxPlMAeKtkC/Untitled?node-id=0-1&p=f&t=5aMPw4xXeYHsYE6I-0',
-    reverse: true,
   },
 ];

@@ -50,6 +50,8 @@ export const ProjectTile = ({
             alt={imgAlt}
             sx={{
               width: { xs: '90%', md: '45%' },
+              height: 'auto',
+              objectFit: 'contain',
             }}
           />
           <Stack
