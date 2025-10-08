@@ -17,11 +17,10 @@ const theme = createTheme({
 });
 
 function App() {
-
   return (
     <>
+      <NavBar />
       <ThemeProvider theme={theme}>
-        <NavBar />
         <Home />
         <Footer />
       </ThemeProvider>

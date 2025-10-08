@@ -3,7 +3,8 @@
   margin: 0px;
 }
 
-html {
+html,
+body {
   background-color: #111111;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
