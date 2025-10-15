@@ -1,7 +1,7 @@
 import { Stack, Typography } from '@mui/material';
 import { Image } from '../../../blocks/Image';
-import TestImage from '../../../../assets/pattern1.png';
 import PlaceIcon from '@mui/icons-material/Place';
+import Me from '../../../../assets/me.jfif';
 
 export const About = () => {
   return (
@@ -20,7 +20,7 @@ export const About = () => {
     >
       <Stack>
         <Image
-          src={TestImage}
+          src={Me}
           alt="Image of Joshua Smith"
           sx={{
             borderRadius: '150px 150px 10px 10px',
