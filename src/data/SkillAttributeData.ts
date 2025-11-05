@@ -11,3 +11,5 @@ export const Tailwind = {
 };
 export const NodeJS = { name: 'NodeJS', bgColor: '#68A063' };
 export const GeminiAI = { name: 'Gemini AI', bgColor: '#078EFA' };
+export const Clerk = { name: 'Clerk', bgColor: '#627fffff' };
+export const MongoDB = { name: 'MongoDB', bgColor: 'rgba(3, 197, 0, 0.93)' };
