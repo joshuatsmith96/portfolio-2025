@@ -1,7 +1,7 @@
 # 💻 Joshua's Interactive Portfolio
 
 ## 🚀 Overview
-Welcome to my personal portfolio! This project is designed not just as a static showcase of my work, but as an interactive, engaging experience that reflects my passion for front-end development.
+Welcome to my personal portfolio! This project is designed not just as a showcase of my work, but as an interactive, engaging experience that reflects my passion for front-end development.
 
 Built with **React**, this portfolio features a unique, highly customizable hero section to give visitors a glimpse of my technical creativity right out of the gate.
 
