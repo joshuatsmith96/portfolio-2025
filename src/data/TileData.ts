@@ -18,11 +18,11 @@ import TrackE from '../assets/project-images/Track-E.png';
 export const Tiles: ProjectTileType[] = [
   {
     imgSrc: TrackE,
-    imgAlt: '',
+    imgAlt: 'Image for Track-E task management Website',
     title: 'Track-E: Task Management',
     skills: [React, TypeScript, MUI, NodeJS, Clerk, MongoDB],
     description:
-      'A full stack todo application that allows for users to create their own "boards" and "lists". ',
+      'A full stack task management web application that allows for users to create their own "boards" and "lists". ',
     githubLink: 'https://github.com/joshuatsmith96/Track-E',
     demoLink: 'https://track-e.joshuasportfolio.org/',
     reverse: true,
