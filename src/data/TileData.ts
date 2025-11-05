@@ -7,12 +7,26 @@ import {
   Tailwind,
   NodeJS,
   GeminiAI,
+  Clerk,
+  MongoDB,
 } from './SkillAttributeData';
 import PortfolioSite from '../assets/project-images/portfolio-image.png';
 import SoleStyle from '../assets/project-images/solestyle.png';
 import AIFactChecker from '../assets/project-images/AI Fact Checker.png';
+import TrackE from '../assets/project-images/Track-E.png';
 
 export const Tiles: ProjectTileType[] = [
+  {
+    imgSrc: TrackE,
+    imgAlt: '',
+    title: 'Track-E: Task Management',
+    skills: [React, TypeScript, MUI, NodeJS, Clerk, MongoDB],
+    description:
+      'A full stack todo application that allows for users to create their own "boards" and "lists". ',
+    githubLink: 'https://github.com/joshuatsmith96/Track-E',
+    demoLink: 'https://track-e.joshuasportfolio.org/',
+    reverse: true,
+  },
   {
     imgSrc: AIFactChecker,
     imgAlt: 'AI Fact Checker website thumbnail',
