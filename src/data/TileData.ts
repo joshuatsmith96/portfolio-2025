@@ -14,6 +14,7 @@ import PortfolioSite from '../assets/project-images/portfolio-image.png';
 import SoleStyle from '../assets/project-images/solestyle.png';
 import AIFactChecker from '../assets/project-images/AI Fact Checker.png';
 import TrackE from '../assets/project-images/Track-E.png';
+import PLMHub from '../assets/project-images/PLMHub.png';
 
 export const Tiles: ProjectTileType[] = [
   {
@@ -44,11 +45,22 @@ export const Tiles: ProjectTileType[] = [
     skills: [React, TypeScript, Tailwind],
     description:
       'A UI for an e-commerce store. This site is a demonstration of my front-end skills. I built it as a way to explore creating a front-end eCommerce platform. You’ll notice there’s no backend, and that’s intentional. The focus is entirely on the frontend, while still giving the appearance of dynamic backend responses.',
-    githubLink: 'https://github.com/joshuatsmith96/portfolio-2025',
+    githubLink: 'https://github.com/joshuatsmith96/SoleStyle',
     demoLink: 'https://solestyle.joshuasportfolio.org',
     figmaLink:
       'https://figma.com/design/MzhwStaWgCcDWfJmPZUGoL/Shoe-Commerce-Store?t=pc1KMvG9NGVzS82l-0',
     reverse: true,
+  },
+  {
+    imgSrc: PLMHub,
+    imgAlt: 'Product Management Lifecycle Website Image',
+    title: 'Product Lifecycle Management',
+    skills: [React, TypeScript, MUI],
+    description:
+      'A demonstration of a very basic Product Lifecycle Management system. Although not fully complete, this project demonstrates how users can flow through a lifeycle process, and how each user can have different roles that allow them to do different things.',
+    githubLink: 'https://github.com/joshuatsmith96/PLM_Platform',
+    figmaLink:
+      'https://www.figma.com/design/QEVMT6MFV4qgri72Ocramw/Project-Lifecycle-Hub?node-id=0-1&t=x4FryvUe6vlPYeKE-1',
   },
   {
     imgSrc: PortfolioSite,
@@ -60,5 +72,6 @@ export const Tiles: ProjectTileType[] = [
     githubLink: 'https://github.com/joshuatsmith96/portfolio-2025',
     figmaLink:
       'https://www.figma.com/design/bVs4UssoLMTQxPlMAeKtkC/Untitled?node-id=0-1&p=f&t=5aMPw4xXeYHsYE6I-0',
+    reverse: true,
   },
 ];
